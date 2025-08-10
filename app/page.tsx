@@ -1,7 +1,7 @@
 "use client";
-import Header from "./Components/Header";
 import ProjectGrid from "./Components/ProjectGrid";
 import Connect from "./Components/Connect";
+import ProjectCarousel from "./Components/ProjectCarousel";
 
 export default function Home() {
   const projectInfo = [
@@ -85,13 +85,16 @@ export default function Home() {
   return (
     <>
       <main className="grid-bg wrapper">
-        <section>
-          <Header />
+        <section className="flex flex-col gap-5 h-full justify-center items-center">
+          <h1 className="text-7xl md:text-8xl text-left font-nata uppercase font-bold">catkos</h1>
+          <h2 className="text-xl">
+            {"heya! i'm catrina koskinen, and i make web pages :)"}
+          </h2>
         </section>
         <section className="flex flex-col justify-center items-center gap-20">
           <h2 className="font-nata text-6xl font-bold uppercase">Projects</h2>
           <div className="section-content w-full md:px-36 py-0">
-            <ProjectGrid projects={projectInfo} />
+            <ProjectCarousel projects={projectInfo} />
           </div>
         </section>
         <section className="flex justify-center items-center">

@@ -18,7 +18,7 @@ interface ProjectGridProps {
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
   return (
     <div
-      className="flex gap-6 overflow-x-auto no-scrollbar"
+      className="flex gap-6 overflow-x-auto"
       style={{ width: "100%", scrollSnapType: "x mandatory" }}
     >
       {projects.map((project, index) => (
