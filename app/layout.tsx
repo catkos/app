@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Threedee from "./Components/Threedee";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,6 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="h-96 w-full bg-slate-950/10 static">
+          <div className="h-full w-full flex flex-col gap-5 justify-center items-center p-10 z-10 relative">
+            <h1 className="text-6xl text-left">catkos</h1>
+            <h2 className="text-xl">
+              hi! i'm catrina koskinen, and i make web pages
+            </h2>
+          </div>
+          <div className="absolute top-0  w-full h-96 z-0">
+            {/* <Threedee /> */}
+          </div>
+        </header>
         {children}
       </body>
     </html>

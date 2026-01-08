@@ -2,111 +2,26 @@
 import ProjectGrid from "./Components/ProjectGrid";
 import Connect from "./Components/Connect";
 import ProjectCarousel from "./Components/ProjectCarousel";
+import { projectInfo } from "./data/arrays";
+import { useRef } from "react";
 
 export default function Home() {
-  const projectInfo = [
-    {
-      name: "Luontomaps",
-      description:
-        "A mapping application that helps users discover and explore natural locations in Helsinki.",
-      techStack: ["JavaScript", "Leaflet", "Citynature API"],
-      image: {
-        src: "/projects/luontomaps_result2.png",
-        alt: "Picture project called Luontomaps",
-      },
-    },
-    {
-      name: "ScriptWiz",
-      demo: "https://scriptwiz.vercel.app/",
-      description:
-        "AI-powered movie script visualizer where you can get the most important parts from the script that matters to you.",
-      techStack: [
-        "Vite",
-        "React",
-        "JavaScript",
-        "Tailwind CSS",
-        "Firebase",
-        "OpenAI API",
-      ],
-      image: {
-        src: "/projects/moviescript_fb.png",
-        alt: "Picture project called ScriptWiz",
-      },
-    },
-    {
-      name: "AI Pagebuilder",
-      description:
-        "Drag-and-drop website builder with AI-generated content and layouts",
-      techStack: [
-        "Vite",
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "MongoDB",
-        "OpenAI API",
-      ],
-      image: {
-        src: "/projects/aipagebuilder_fb.png",
-        alt: "Picture project called AI Pagebuilder",
-      },
-    },
-    {
-      name: "OnlyCats",
-      description:
-        "Instagram style media sharing application for cat lovers. Upload, modify, comment, rate and search photos.",
-      techStack: ["Vite", "React", "Material UI"],
-      image: {
-        src: "/projects/onlycats.png",
-        alt: "Picture project called OnlyCats",
-      },
-    },
-    {
-      name: "Pistokkaat",
-      description: "Front-End website for selling and buying plant cuttings.",
-      techStack: ["JavaScript"],
-      image: {
-        src: "/projects/pistokkaat.png",
-        alt: "Picture project called Pistokkaat",
-      },
-    },
-    {
-      name: "Book Club",
-      demo: "https://ck-book-club.vercel.app/",
-      description:
-        "Your personal book library. Saves notes to user's local storage. In the future, going to build backend and users, etc...",
-      techStack: ["Vite", "React", "TypeScript"],
-      image: {
-        src: "/projects/bookclub.png",
-        alt: "Picture project called Book Club",
-      },
-    },
-  ];
-
+  const sectionProjects = useRef(null);
   return (
     <>
-      <main className="grid-bg wrapper">
-        <section className="flex flex-col gap-5 h-full justify-center items-center">
-          <h1 className="text-7xl md:text-8xl text-left font-nata uppercase font-bold">catkos</h1>
-          <h2 className="text-xl">
-            {"heya! i'm catrina koskinen, and i make web pages :)"}
-          </h2>
+      <main className="grid-bg wrapper p-10 flex flex-col gap-10">
+        <section ref={sectionProjects} className="">
+          <h2>Projects</h2>
+          <ProjectGrid projects={projectInfo} />
         </section>
-        <section className="flex flex-col justify-center items-center gap-20">
-          <h2 className="font-nata text-6xl font-bold uppercase">Projects</h2>
-          <div className="section-content w-full md:px-36 py-0">
-            <ProjectCarousel projects={projectInfo} />
-          </div>
-        </section>
-        <section className="flex justify-center items-center">
+        <section className="py-32">
           <Connect />
         </section>
       </main>
-      <div className="round-ani">
+      <div className="round-ani -z-10">
         <div className="green-ball"></div>
         <div className="red-ball"></div>
       </div>
-
-      <div className="white-ball"></div>
     </>
   );
 }

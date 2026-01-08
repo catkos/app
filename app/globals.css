@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Nata+Sans:wght@100..900&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-nata: "Nata Sans", sans-serif;
   --color-avocado-100: #65c9a9;
   --color-primary-red: #c9658a;
 }
@@ -12,43 +10,11 @@
   --foreground: #ededed;
 }
 
-/* Base reset */
-html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
   background: var(--background);
   color: var(--foreground);
-  font-family: "Nata Sans", sans-serif;
-}
-
-body,
-main.wrapper {
-  min-height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-section {
-  height: 100vh;
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  box-sizing: border-box;
-  z-index: 10;
 }
 
 .grid-bg {
@@ -83,22 +49,6 @@ section {
   pointer-events: none;
   animation: fade-in-scale 4s ease-in-out alternate infinite;
   z-index: 1;
-}
-.white-ball {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -52%);
-  border-radius: 100%;
-  height: 1000px;
-  width: 1000px;
-  opacity: 1;
-  border-width: 0px 1px 3px 0px;
-  border-style: solid;
-  border-color: #fff;
-  pointer-events: none;
-  animation: fade-in-scale-2 10s ease-in-out alternate infinite;
-  z-index: 0;
 }
 
 .round-ani {
