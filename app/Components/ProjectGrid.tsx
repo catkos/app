@@ -17,16 +17,13 @@ interface ProjectGridProps {
 
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
   return (
-    <div
-      className="flex gap-6 overflow-x-auto"
-      style={{ width: "100%", scrollSnapType: "x mandatory" }}
-    >
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="flex-shrink-0 w-full sm:w-[calc(100vw/3-1.5rem)]
+          className="flex-shrink-0 w-full
             bg-white/20 shadow-lg ring-1 ring-black/5 backdrop-filter backdrop-blur-sm rounded-lg
-            transition-shadow duration-300 overflow-hidden scroll-snap-align-start"
+            transition-shadow duration-300"
         >
           <div className="relative" style={{ height: 300 }}>
             <Image

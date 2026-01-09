@@ -1,7 +1,7 @@
 const Connect = () => {
   return (
     <>
-      <section className="flex flex-col gap-5 h-full justify-center items-center">
+      <div className="flex flex-col gap-5 h-full justify-center items-center">
         <h2 className="text-6xl font-nata uppercase font-bold pb-10">
           Connect!
         </h2>
@@ -39,7 +39,7 @@ const Connect = () => {
             </svg>
           </a>
         </div>
-      </section>
+      </div>
     </>
   );
 };

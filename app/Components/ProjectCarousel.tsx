@@ -1,3 +1,5 @@
+// not in use, old
+
 "use client";
 
 import React, { useRef } from "react";
@@ -21,7 +23,7 @@ interface ProjectGridProps {
 const ProjectCarousel: React.FC<ProjectGridProps> = ({ projects }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scrollAmount = 400; // Adjust based on card width
+  const scrollAmount = 400;
 
   const handleScroll = (direction: "left" | "right") => {
     const container = scrollRef.current;
