@@ -6,6 +6,14 @@
 
   --font-cutiveMono: "Cutive Mono";
   --font-sans: "Inter";
+
+  --animate-spin: spin-90deg 3s ease-in-out infinite alternate;
+}
+
+@keyframes spin-90deg {
+  to {
+    transform: rotate(90deg);
+  }
 }
 
 :root {

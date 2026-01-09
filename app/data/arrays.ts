@@ -86,4 +86,14 @@ export const projectInfo = [
       alt: "Screenshot of a project called Road camera search",
     },
   },
+  {
+    name: "Game Card Database",
+    description:
+      "Database/Archive e.g. game cards. User can filter, add a new card through front-end.",
+    techStack: ["Next", "React", "TypeScript", "Node.js", "Express", "MongoDB"],
+    image: {
+      src: "/projects/ds-archive.png",
+      alt: "Screenshot of a project called Road camera search",
+    },
+  },
 ];
