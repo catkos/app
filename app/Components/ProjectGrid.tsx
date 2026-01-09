@@ -17,13 +17,13 @@ interface ProjectGridProps {
 
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="flex-shrink-0 w-full
+          className="flex flex-col w-full
             bg-white/20 shadow-lg ring-1 ring-black/5 backdrop-filter backdrop-blur-sm rounded-lg
-            transition-shadow duration-300"
+            transition-shadow duration-300 min-h-[500px]"
         >
           <div className="relative" style={{ height: 300 }}>
             <Image
@@ -33,7 +33,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
               className="object-cover w-full h-full"
             />
           </div>
-          <div className="p-4">
+          <div className="p-4 flex flex-col flex-1">
             <h3 className="text-xl font-bold mb-2 font-nata">
               {project.name}{" "}
               {project.demo && (
@@ -48,8 +48,8 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
                 </span>
               )}
             </h3>
-            <p className="pb-3">{project.description}</p>
-            <div className="flex flex-wrap gap-2">
+            <p className="pb-3 flex">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mt-auto">
               {project.techStack.map((tech, techIndex) => (
                 <span
                   key={techIndex}

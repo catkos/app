@@ -64,6 +64,7 @@ export const projectInfo = [
       alt: "Picture project called Pistokkaat",
     },
   },
+  /*
   {
     name: "Book Notes",
     demo: "https://ck-book-club.vercel.app/",
@@ -72,6 +73,17 @@ export const projectInfo = [
     image: {
       src: "/projects/bookclub.png",
       alt: "Picture project called Book Club",
+    },
+  },*/
+  {
+    name: "Road Camera Search",
+    demo: "https://tieliikennehaku.vercel.app/",
+    description:
+      "Search up of all road traffic cameras by finnish city. Uses Digitraffic's API.",
+    techStack: ["Next", "React", "TypeScript"],
+    image: {
+      src: "/projects/liikennekamerahaku.png",
+      alt: "Screenshot of a project called Road camera search",
     },
   },
 ];
