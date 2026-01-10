@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`${interSans.variable} ${cutive.variable} antialiased`}>
         <header className="h-[50vh] w-full bg-slate-950/10 static">
           <div className="h-full w-full flex flex-col gap-5 justify-center items-center p-10 z-10 relative">
-            <h1 className="text-7xl text-left font-cutiveMono text-shadow-lg">
+            <h1 className="text-7xl text-left font-cutiveMono text-shadow-md">
               catkos
             </h1>
             <h2 className="text-xl">

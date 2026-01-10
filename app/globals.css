@@ -11,10 +11,17 @@
 }
 
 @keyframes spin-90deg {
-  to {
-    transform: rotate(90deg);
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(45deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(90deg) scale(1);
   }
 }
+
 
 :root {
   --background: #0a0a0a;
