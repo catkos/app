@@ -45,7 +45,7 @@ export const projectInfo = [
     },
   },
   {
-    name: "Cat Social Media App",
+    name: "Social Media App",
     description:
       "Instagram style media sharing application for cat lovers. Upload, modify, comment, rate and search photos.",
     techStack: ["Vite", "React", "Material UI"],
@@ -94,6 +94,17 @@ export const projectInfo = [
     image: {
       src: "/projects/ds-archive.png",
       alt: "Screenshot of a project called Road camera search",
+    },
+  },
+  {
+    name: "Photo Gallery",
+    demo: "https://gallery-of-fruits.vercel.app/",
+    description:
+      "Front-end site for a horizontally scrolled gallery. Gsap animation library exercise.",
+    techStack: ["Next", "React", "TypeScript"],
+    image: {
+      src: "/projects/gallery-of-fruits.png",
+      alt: "Screenshot of a project called Photo Gallery",
     },
   },
 ];

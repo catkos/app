@@ -18,7 +18,7 @@ interface ProjectGridProps {
 const ProjectGrid: React.FC<ProjectGridProps> = ({ projects }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-      {projects.map((project, index) => (
+      {[...projects].reverse().map((project, index) => (
         <div
           key={index}
           className="flex flex-col w-full
