@@ -3,6 +3,7 @@ import ProjectGrid from "./Components/ProjectGrid";
 import Connect from "./Components/Connect";
 import { projectInfo } from "./data/arrays";
 import { useRef } from "react";
+import Models from "./Components/Models";
 
 export default function Home() {
   const sectionProjects = useRef(null);
@@ -18,6 +19,16 @@ export default function Home() {
             </div>
           </div>
           <ProjectGrid projects={projectInfo} />
+        </section>
+        <section className="w-full lg:w-5/6">
+          <div className="my-5 relative">
+            <div className="relative z-10 flex flex-row items-center justify-center gap-5 py-5 w-full text-center bg-black/30 ring-2 ring-black/20 rounded backdrop-blur-sm">
+              <h2 className="text-avocado-100 text-4xl font-bold font-cutiveMono bg-clip-text transparent text-shadow-md">
+                3d models
+              </h2>
+            </div>
+          </div>
+          <Models />
         </section>
         <section className="py-32">
           <Connect />
