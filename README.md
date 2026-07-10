@@ -1,5 +1,7 @@
-This is my portfolio app!
+# Portfolio App
 
-next.js, react, typescript, tailwind css
+## Stack
 
-https://catkos.vercel.app/
+Next.js, React, TypeScript, Tailwind CSS
+
+[catkos.vercel.app](https://catkos.vercel.app/)
